@@ -1,0 +1,8 @@
+﻿  constant.cpp
+  dllmain.cpp
+  genCode.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 118 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  AC.vcxproj -> C:\Users\schwarztoter\source\repos\AC\Release\AC.dll
