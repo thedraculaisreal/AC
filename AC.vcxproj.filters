@@ -24,12 +24,24 @@
     <ClCompile Include="src\genCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\geom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\esp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\constant.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\genCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\geom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\esp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

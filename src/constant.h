@@ -5,3 +5,7 @@
 extern HMODULE hModule;
 extern uintptr_t exeBaseAddress;
 extern Player* localPlayerPtr;
+extern EntityList* players;
+extern int numPlayers;
+
+void resetPointers();

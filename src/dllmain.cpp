@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "constant.h"
 #include "genCode.h"
+#include "esp.h"
 
 
 
@@ -10,7 +11,12 @@
 
 void hook()
 {
-
+    while (true)
+    {
+        resetPointers();
+        ESP::aimbot();
+        Sleep(80);
+    }
 }
 
 void console()
@@ -36,6 +42,15 @@ void console()
             localPlayerPtr->pos.x -= 5;
         if (input == "test")
             std::cout << "Local Player Ptr" << localPlayerPtr << std::endl;
+        if (input == "players")
+            std::cout << "number of players " << numPlayers << std::endl;
+        if (input == "ent")
+        {
+            for (int i = 1; i < 16; i++)
+            {
+                 
+            }
+        }
     }
     FreeConsole();
 }
