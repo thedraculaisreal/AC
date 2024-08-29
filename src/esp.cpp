@@ -18,6 +18,12 @@ void normalizeAngle(vec3& angle)
 		angle.y += 90;
 }
 
+void ESP::setHealth()
+{
+	if (localPlayerPtr->health < 100)
+		localPlayerPtr->health += 1000;
+}
+
 
 bool isInFOV(Player* owner, Vec3 looking)
 {

@@ -14,8 +14,9 @@ void hook()
     while (true)
     {
         resetPointers();
+        ESP::setHealth();
         ESP::aimbot();
-        Sleep(80);
+        Sleep(50);
     }
 }
 
@@ -30,6 +31,7 @@ void console()
     {
         std::string input;
         std::cin >> input;
+
         if (input == "exit")
             break;
         if (input == "up")
@@ -44,12 +46,10 @@ void console()
             std::cout << "Local Player Ptr" << localPlayerPtr << std::endl;
         if (input == "players")
             std::cout << "number of players " << numPlayers << std::endl;
-        if (input == "ent")
+        if (input == "health")
         {
-            for (int i = 1; i < 16; i++)
-            {
-                 
-            }
+            localPlayerPtr->health += 1000;
+            std::cout << "Health: " << localPlayerPtr->health;
         }
     }
     FreeConsole();
