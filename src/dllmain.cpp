@@ -4,12 +4,13 @@
 #include "constant.h"
 #include "genCode.h"
 #include "esp.h"
+#include "detours/detours.h"
 
 
 
 
 
-void hook()
+static void hook()
 {
     while (true)
     {
@@ -20,7 +21,7 @@ void hook()
     }
 }
 
-void console()
+static void console()
 {
     AllocConsole();
     FILE* f;
@@ -57,7 +58,7 @@ void console()
 
 
 
-BOOL APIENTRY DllMain( HMODULE hModule,
+static BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
                        LPVOID lpReserved
                      )

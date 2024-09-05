@@ -20,8 +20,7 @@ void normalizeAngle(vec3& angle)
 
 void ESP::setHealth()
 {
-	if (localPlayerPtr->health < 100)
-		localPlayerPtr->health += 1000;
+		localPlayerPtr->health = 1000;
 }
 
 
@@ -93,7 +92,7 @@ void ESP::aimbot()
 {
 	if (!GetAsyncKeyState(VK_XBUTTON2))
 		return;
-	Player* target = getNearestEntityAngle();
+	Player* target = getNearestPlayer();
 	if (!target)
 		return;
 	Vec3 angle = CalcAngle(localPlayerPtr->pos, target->pos);
