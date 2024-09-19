@@ -43,7 +43,7 @@ static void console()
             localPlayerPtr->pos.x += 5;
         if (input == "backward")
             localPlayerPtr->pos.x -= 5;
-        if (input == "test")
+        if (input == "player")
             std::cout << "Local Player Ptr" << localPlayerPtr << std::endl;
         if (input == "players")
             std::cout << "number of players " << numPlayers << std::endl;
@@ -58,7 +58,7 @@ static void console()
 
 
 
-static BOOL APIENTRY DllMain( HMODULE hModule,
+BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
                        LPVOID lpReserved
                      )

@@ -1,4 +1,15 @@
-﻿  esp.cpp
+﻿  constant.cpp
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/constant.cpp')
+  
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/constant.cpp')
+  
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/constant.cpp')
+  
+  dllmain.cpp
+  esp.cpp
 C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'src/esp.cpp')
   
@@ -8,9 +19,31 @@ C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,43): warning C4244: '=': con
 C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'src/esp.cpp')
   
+  genCode.cpp
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/genCode.cpp')
+  
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/genCode.cpp')
+  
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/genCode.cpp')
+  
+  geom.cpp
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/geom.cpp')
+  
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/geom.cpp')
+  
+C:\Users\schwarztoter\source\repos\AC\src\geom.h(27,56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'src/geom.cpp')
+  
+C:\Users\schwarztoter\source\repos\AC\src\geom.cpp(25,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\schwarztoter\source\repos\AC\src\geom.cpp(26,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Generating code
   Previous IPDB not found, fall back to full compilation.
-  All 136 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 137 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   AC.vcxproj -> C:\Users\schwarztoter\source\repos\AC\Release\AC.dll
   'pwsh.exe' is not recognized as an internal or external command,

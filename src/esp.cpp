@@ -6,7 +6,7 @@
 
 const float FOV = 90;
 
-void normalizeAngle(vec3& angle)
+static void normalizeAngle(vec3& angle)
 {
 	if (angle.x > 360)
 		angle.x -= 360;
@@ -24,7 +24,7 @@ void ESP::setHealth()
 }
 
 
-bool isInFOV(Player* owner, Vec3 looking)
+static bool isInFOV(Player* owner, Vec3 looking)
 {
 	Vec3 angle = CalcAngle(owner->pos, looking);
 	Vec3 playerAngle(owner->yaw + 180, owner->pitch, 0);
@@ -36,7 +36,7 @@ bool isInFOV(Player* owner, Vec3 looking)
 	return (fabs(angleDiff.x) <= FOV / 2 && fabs(angleDiff.y) <= FOV / 2);
 }
 
-bool isValidTarget(Player* player)
+static bool isValidTarget(Player* player)
 {
 	if (player->health > 100 || player->health <= 0 ) //!isInFOV(localPlayerPtr, player->o)
 		return false;
@@ -46,22 +46,23 @@ bool isValidTarget(Player* player)
 Player* ESP::getNearestPlayer()
 {
 	Player* nearestPlayer = nullptr;
-	float nearestDistance = 9999999.0f;
+	float smallestDistance = 9999999.0f;
+
 	for (int i = 1; i < numPlayers + 1; i++)
 	{
 		Player* player = players->players[i];
 		if (!isValidTarget(player))
 			continue;
 		float distance = localPlayerPtr->pos.Distance(player->pos);
-		if (distance < nearestDistance)
+		if (distance < smallestDistance)
 		{
-			nearestDistance = distance;
+			smallestDistance = distance;
 			nearestPlayer = player;
 		}
-
 	}
 	return nearestPlayer;
 }
+
 
 Player* ESP::getNearestEntityAngle()
 {
@@ -92,7 +93,7 @@ void ESP::aimbot()
 {
 	if (!GetAsyncKeyState(VK_XBUTTON2))
 		return;
-	Player* target = getNearestPlayer();
+	Player* target = getNearestEntityAngle();
 	if (!target)
 		return;
 	Vec3 angle = CalcAngle(localPlayerPtr->pos, target->pos);
